@@ -1,12 +1,37 @@
+package com.brocode.javaswing;
+
 import javax.swing.*;
 import javax.swing.border.Border;
 import java.awt.*;
-import java.util.Objects;
 
-public class Main {
-    public static void main(String[] args) {
-        System.out.println("Hello World");
-//        new MyFrame();
+public class Label extends JFrame {
+    public Label() {
+        JFrame frame = new Frame();
+        createLabel(frame);
+    }
+
+    private void createLabel(JFrame frame) {
+        ImageIcon imageIcon = new ImageIcon("b.png");
+        Border border = BorderFactory.createLineBorder(Color.BLACK, 5);
+        JLabel label = new JLabel();
+
+        label.setText("How you doing?");
+        label.setIcon(imageIcon);
+        label.setHorizontalTextPosition(JLabel.CENTER);
+        label.setVerticalTextPosition(JLabel.TOP);
+        label.setFont(new Font("Verdana", Font.BOLD, 18));
+        label.setForeground(new Color(255,255,255));
+        label.setBackground(Color.RED);
+        label.setOpaque(true);
+        label.setBorder(border);
+
+        label.setBounds(50, 50, 350, 350);
+
+        label.setVerticalAlignment(JLabel.CENTER);
+        label.setHorizontalAlignment(JLabel.CENTER);
+
+        frame.add(label);
+        /*
         ImageIcon image = new ImageIcon("b.png");
         Border border = BorderFactory.createLineBorder(Color.RED, 3);
 
@@ -37,5 +62,6 @@ public class Main {
         jFrame.setResizable(true);
         jFrame.add(label);
         jFrame.pack();
+         */
     }
 }
